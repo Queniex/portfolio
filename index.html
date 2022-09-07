@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Zah.</title>
+
+    <!-- Link daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.2/dist/full.css" rel="stylesheet" type="text/css" />
+
+    <!-- Link tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            container: {
+              center: true,
+              padding: '16px'
+            },
+            extend: {
+              colors: {
+                primary: '#14b8a6',
+                home: '#FFF5E4',
+                pinkx: '#FFC4C4',
+                pinkxx: '#EE6983',
+                pinkxxx: '#ffbbf6',
+                redx: '#850E35',
+                box: '#D9D9D9',
+              },
+              screens: {
+                '2xl': '1320px',
+              },
+              animation: {
+                'hai': 'wave 2s ease-in-out infinite',
+              },
+              keyframes:{
+                wave: {
+                  '0%,100%': { transform: 'rotate (7deg)'},
+                  '50%': { transform: 'rotate(-10deg)'},
+                  '75%': { transform: 'rotate(10deg)'},
+                },
+              }
+            }
+          }
+        }
+      </script>
+
+      <style type="text/tailwindcss">
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Dosis:wght@500&family=Luckiest+Guy&family=Poppins:ital,wght@0,300;0,500;0,600;0,800;0,900;1,600&display=swap');
+
+        @layer utilities {
+         .hamburger-active > span:nth-child(1){
+           @apply rotate-45;
+         }
+
+         .hamburger-active > span:nth-child(3){
+           @apply -rotate-45;
+         }
+
+         .hamburger-active > span:nth-child(2){
+           @apply scale-0;
+         }
+
+         .navbar-fixed{
+          @apply fixed z-[9999] bg-red-100 bg-opacity-60;
+          backdrop-filter: blur(5px);
+          box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
+         }
+
+         @layer base {
+          *{
+            font-family: 'Poppins', sans-serif;
+          }
+         }
+
+        /* *{
+          border: 1px solid blue
+         } */
+
+        }
+      </style>
+
+</head>
+<body>
+
+    <!-- Header Start -->
+    <header class="bg-red-100 absolute top-0 left-0 flex items-center z-10 border-solid border-2 w-[100vw]">
+      <div class="container w-full">
+        <div class="flex items-center justify-between relative ">
+          <div class="px-4">
+            <a href="#home" class="font-bold text-black block ml-5 py-5 text-4xl lg:text-6xl lg:flex justify">Zah.</a>
+          </div>
+
+          <div class="flex items-center px-4">
+            <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+              <span class="w-[30px] h-[2px] my-2 block bg-neutral-900 transition duration-3000 ease-in-out origin-top-left"></span>
+              <span class="w-[30px] h-[2px] my-2 block bg-neutral-900 transition duration-3000 ease-in-out"></span>
+              <span class="w-[30px] h-[2px] my-2 block bg-neutral-900 transition duration-3000 ease-in-out origin-bottom-left"></span>
+            </button>
+          </div>
+
+          <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none lg:flex justify-end">
+            <ul class="block lg:flex justify-end lg:bg-pinkxxx lg:rounded-full lg:w-[585px]lg:bg-slate-300">
+
+              <li class="group">
+                <a href="#home" class="text-slate-900 text-base py-2 mx-8 flex group-hover:text-pink-500 lg:group-hover:text-red-100 lg:text-2xl lg:group-hover:underline decoration-redx underline-offset-8">Home</a>
+              </li>
+
+              <li class="group">
+                <a href="#experience" class="text-slate-900 text-base py-2 mx-8 flex group-hover:text-pink-500 lg:group-hover:text-red-100 lg:text-2xl lg:group-hover:underline decoration-redx underline-offset-8">Experience</a>
+              </li>
+
+              <li class="group">
+                <a href="#skill" class="text-slate-900 text-base py-2 mx-8 flex group-hover:text-pink-500 lg:group-hover:text-red-100 lg:text-2xl lg:group-hover:underline decoration-redx underline-offset-8">Skill</a>
+              </li>
+
+              <li class="group">
+                <a href="#contact" class="text-slate-900 text-base py-2 mx-8 flex group-hover:text-pink-500 lg:group-hover:text-red-100 lg:text-2xl lg:group-hover:underline decoration-redx underline-offset-8">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class=" w-[100vw] pt-28 lg:pt-36 bg-home">
+        <div>
+            <div class="flex flex-wrap">
+
+                <div class=" w-full self-center px-10 lg:w-1/2 lg:px-16">
+                    <div class="lg:lg:flex justify-end lg:py-7">
+                      <div class="lg:w-8/12 lg:h-20 lg:bg-pinkxxx lg:mr-5"></div>
+                      <div class="lg:w-20 lg:h-20 lg:bg-pinkx lg:mr-5"></div>
+                      <div class="lg:w-20 lg:h-20 lg:bg-pinkxxx"></div>
+                      <div class="lg:w-20 lg:h-20 lg:bg-pinkx lg:ml-5"></div>
+                    </div>
+                    <h1 class="text-base font-semibold text-redx text-[70px] mt-4 lg:text-7xl">Hi!<span class="ml-[5px]"><img height="50px" width="50px" src="/dist/Experience abiz/hai.png " alt="" class="inline-block animate-hai"></span> 
+                    <span class="block mt-[10px] text-[32px] lg:text-4xl lg:mt-1">My Name is Fild<span class="font-bold text-black">zah.
+                    <h2 class="font-medium text-redx mt-2 text-lg lg:text-3xl">I'm a <span class="text-black font-bold">Backend Developer</span></h2>
+                    <p class="text-slate-900 font-medium mb-[17px] lg:mb-6 leading-relaxed text-[14px] lg:text-[20px]">And <span class="text-redx">pink </span>is my fav's colour, hehe.</p>
+                    
+                    <div class="flex lg:justify-center lg:h-20 lg:w-15 lg:relative lg:mt-5">
+                      <a href="#" class=" text-base font-semibold text-redx bg-pinkxxx py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 hover:text-slate-800 transition duration-300 ease-in-out lg:text-[20px] lg:font-bold lg:absolute lg:top-3 lg:border-solid lg:border-2 lg:border-slate-900">Let's Talk!</a>
+                    </div>
+
+                </div>
+                
+                <div class="w-full self-end px-4 lg:w-1/2 ">
+                  <div class="relative mt-10 lg:mt-0 lg:right-0">
+                    <img src="https://i.postimg.cc/3RXvXJ9K/mex3.png" alt="me" class="max-w-full mx-auto lg:h-full">
+                  </div>
+                </div>
+                <!-- <div class="lg:w-[100vw] lg:h-[25px] lg:bg-pinkxxx"></div> -->
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Experience Section Start -->
+    <section id="experience" class="h-[100vh] w-[100vw] bg-pinkxx">
+      <div class="container pt-24 lg:pt-[100px]">
+        <!-- <div class="flex justify-center lg:justify-end text-2xl mb-1 lg:mt-5 text-white lg:text-3xl"><u>Experience</u></div> -->
+        <div class="flex flex-wrap justify-center">
+          
+            <div class="px-10 w-[70%] lg:self-end md:w-1/2 lg:w-1/2 pb-1">
+              <div class="carousel w-[100%] lg:w-[90%]">
+                <div id="item1" class="mt-2 carousel-item w-full">
+                  <img src="https://i.postimg.cc/7hbKpScY/ea3.png" class="max-w-full mx-auto rounded-md lg:rounded-xl"/>
+                </div> 
+                <div id="item2" class="mt-2 carousel-item w-full">
+                  <img src="https://i.postimg.cc/J0nBxqFK/ea6.png" class="max-w-full mx-auto rounded-md lg:rounded-xl"/>
+                </div> 
+                <div id="item3" class="mt-2 carousel-item w-full">
+                  <img src="https://i.postimg.cc/yY8TphRM/ea2.png" class="max-w-full mx-auto rounded-md lg:rounded-xl"/>
+                </div> 
+                <div id="item4" class="mt-2 carousel-item w-full">
+                  <img src="https://i.postimg.cc/MKHym62x/ea4.png" class="max-w-full mx-auto rounded-md lg:rounded-xl"/>
+                </div>
+                <div id="item5" class="mt-2 carousel-item w-full">
+                  <img src="https://i.postimg.cc/Z0t8YQjn/ea5.png" class="max-w-full mx-auto rounded-md lg:rounded-xl"/>
+                </div>
+                <div id="item6" class="mt-2 carousel-item w-full">
+                  <img src="https://i.postimg.cc/dV9xXRtr/ea1.png" class="max-w-full mx-auto rounded-md lg:rounded-xl"/>
+                </div>
+              </div>
+              <div class="flex justify-center w-[100%] lg:w-[90%] gap-2 lg:gap-3">
+                <a href="#item1" class="bg-pinkx text-black hover:text-white btn btn-xs">1</a> 
+                <a href="#item2" class="bg-pinkx text-black hover:text-white btn btn-xs">2</a> 
+                <a href="#item3" class="bg-pinkx text-black hover:text-white btn btn-xs">3</a> 
+                <a href="#item4" class="bg-pinkx text-black hover:text-white btn btn-xs">4</a>
+                <a href="#item5" class="bg-pinkx text-black hover:text-white btn btn-xs">5</a>
+                <a href="#item6" class="bg-pinkx text-black hover:text-white btn btn-xs">6</a>
+              </div>
+            </div>
+
+            <div class="px-4 py-4  text-black md:w-1/2 lg:w-1/2 lg:self-center">
+              <div class="flex justify-start">
+                <div class="lg:bg-redx lg:w-[40%] lg:h-[60px] lg:mb-4 lg:mr-6">
+                  <div class="flex justify-center text-white font-medium lg:mt-3 lg:text-2xl">Experience</div>
+                </div>
+                <div class="lg:bg-pinkxxx lg:w-[50px] lg:h-[60px] lg:mb-4 "></div>
+                <div class="lg:bg-pinkxxx lg:w-[40px] lg:h-[60px] lg:mb-4 lg:ml-4"></div>
+                <div class="lg:bg-pinkxxx lg:w-[30px] lg:h-[60px] lg:mb-4 lg:ml-3"></div>
+              </div>
+
+              <h1 class="px-2 py-2 bg-pinkx">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, debitis laudantium repudiandae facilis adipisci commodi ut, quis nesciunt cumque sapiente obcaecati, incidunt dolores dolorem accusantium tempora placeat iusto aliquid inventore.</h1>
+
+              <div class="flex justify-end mt-4">
+                <div class="lg:bg-pinkxxx lg:w-[30px] lg:h-[60px] lg:mb-4 lg:mr-3"></div>
+                <div class="lg:bg-pinkxxx lg:w-[40px] lg:h-[60px] lg:mb-4 lg:mr-4"></div>
+                <div class="lg:bg-pinkxxx lg:w-[50px] lg:h-[60px] lg:mb-4 lg:mr-6"></div>
+                <div class="lg:bg-redx lg:w-[40%] lg:h-[60px] lg:mb-4 "></div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- Experience Section End -->
+
+    <!-- Skill Section Start -->
+    <section id="skill" class="bg-home w-[100vw] h-[100vh] bg-pinkx">
+      <div class="container pt-28 lg:pt-36 bg-red-600">
+        <div class="flex justify-start bg-redx rounded-2xl px-4 py-4 w-36">
+          <div class="w-8 h-8 ml-3 mr-1 rounded-full bg-pink-300"></div>
+          <h1 class="text-2xl text-white"><u>Skill</u></h1>
+        </div>
+      </div>
+    </section>
+    <!-- Skill Section End -->
+
+    <script src="dist/js/script.js"></script>
+</body>
+</html>
